@@ -1,18 +1,40 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import login from '@/components/login'
-import contain from '@/components/home/contain'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
-      component: login
+      component: () => import('../page/login.vue')
     },
     {
-      path:'/contain',
-      component:contain,
+      path: '/home',
+      component: () => import('../components/home.vue'),
+      children: [
+        {
+          path: '',
+          redirect: 'content',
+        },
+        {
+          path: 'content',
+          component: () => import('../components/content.vue')
+        },
+        {
+          path: 'componey',
+          component: () => import('../components/componey.vue')
+        },
+        {
+          path: 'message',
+          component: () => import('../components/message.vue')
+        },
+        {
+          path: 'own',
+          component: () => import('../components/own.vue')
+        }
+      ]
     }
   ]
-})
+});
+
+
