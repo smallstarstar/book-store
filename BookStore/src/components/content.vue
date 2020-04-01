@@ -51,8 +51,7 @@ export default {
   },
   methods: {
     onLoad() {
-      // 异步更新数据
-      console.log('===========')
+    
     }
   }
 };

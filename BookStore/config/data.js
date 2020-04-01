@@ -16,7 +16,6 @@ export const TabBarList = {
         {
             name: '消息',
             icon: 'chat-o',
-            info: '9',
             id: 3,
             path: '/home/message'
         },
@@ -161,3 +160,57 @@ export const ComponeyList = [
         img: ''
     }
 ]
+export const MessageList = [
+    {
+        id: 1,
+        img: '',
+        person: '朱女士',
+        componey: '柯蓝科技',
+        job: '前端Leader',
+        message: '你好，我对你很感兴趣',
+        isReading: false,
+        date: '3月14日'
+    },
+    {
+        id: 2,
+        img: '',
+        person: '王先生',
+        componey: '阿里巴巴',
+        job: '招聘主管',
+        message: '你好我是阿里巴巴人事',
+        isReading: true,
+        date: '3月12日'
+    },
+    {
+        id: 3,
+        img: '',
+        person: '张经理',
+        componey: '华为科技',
+        job: '招聘经理',
+        message: '你好，我对你很感兴趣',
+        isReading: true,
+        date: '3月12日'
+    },
+    {
+        id: 4,
+        img: '',
+        person: '李女士',
+        componey: '百度科技',
+        job: '前端Leader',
+        message: '你好，我对你很感兴趣',
+        isReading: false,
+        date: '3月11日'
+    },
+    {
+        id: 5,
+        img: '',
+        person: '张女士',
+        componey: '乐章科技',
+        job: '招聘总监',
+        message: '你好，我对你很感兴趣',
+        isReading: false,
+        date: '3月11日'
+    }
+]
+
+export const MessagStauts = ["全部", "已读", "未读"]

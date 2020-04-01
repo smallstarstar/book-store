@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { TabBarList } from "../../config/data";
+import { TabBarList, MessageList } from "../../config/data";
 import rxEvent from "pubsub-js";
 import EventKeys from "../common/event-keys";
 export default {
@@ -23,6 +23,14 @@ export default {
     };
   },
   created() {
+    let data = MessageList.filter((e)=>{
+      return e.isReading === false;
+    })
+    this.tabbar.forEach((e, index) => {
+      if(index === 2) {
+        e.info = data.length;
+      }
+    });
     this.$store.dispatch("savetitleInfo", this.tabbar[0]);
   },
   methods: {
